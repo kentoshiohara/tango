@@ -1,6 +1,11 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   padding: 20px 0;
-  background: #fff;
+  background: rgb(219, 219, 219);
   border-bottom: 1px solid black;
 }
 
@@ -21,4 +26,6 @@ header {
 .list {
   margin-right: 2em;
 }
+
+
 
