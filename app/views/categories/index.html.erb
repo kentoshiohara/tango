@@ -1,0 +1,27 @@
+<div class="category-main">
+  <div class="category-container">
+    <h2 class="wordbook-title"><%= link_to current_user.name %>さんの単語帳一覧</h2>
+    <div class="list-container">
+      <ul class="wordbook-lists">
+      <% current_user.categories.each do |category|%>
+        <li><%= link_to category.title, "#", class: 'wordbook_list' %></li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="title-btn">
+      <%= link_to categories_path do %>
+      <p class="create-title-btn"><i class="far fa-plus-square"></i>新しく作る</p>
+      <% end %>
+      <div class="title-form">
+        <%= form_with model: @category, id: 'title_form', class: 'hidden', local: true do |f| %>
+        <div class="form">
+          <%= f.submit "＋", class:"submit-field"%>
+          <%= f.text_field :title, placeholder:"タイトル", class:"title-field" %>
+          <%# カラーを選べればなお良し %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

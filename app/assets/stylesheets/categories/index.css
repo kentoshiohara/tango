@@ -1,0 +1,96 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.category-main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.category-container {
+  width: 70%;
+  margin: 100px auto;
+}
+
+.wordbook-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 80px;
+  letter-spacing: 0.1em;
+}
+
+.list-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.wordbook-lists {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+}
+
+.wordbook_list {
+  display: inline-block;
+  width: 110px;
+  padding: 0.8em 2em;
+  background: #f7f7f7;
+  border-left: solid 8px #5bb1fc;
+  color: #5bb1fc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  text-align: center;
+  margin: 1em 3em;
+}
+
+.title-btn {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.create-title-btn {
+  width: 110px;
+  padding: 0.8em 2em;
+  background: #f7f7f7;
+  border-left: solid 8px #707070;
+  color: #707070;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  text-align: center;
+  margin: 1em 1em 2em 3em;
+}
+
+.fa-plus-square {
+  margin-right: 10px;
+}
+
+.title-form {
+  display: flex;
+}
+
+
+.form {
+  margin:0 0 0 3em;
+}
+
+.submit-field {
+  border: none;
+  background: none;
+  margin-right: 6px;
+  cursor: pointer;
+}
+
+.title-field {
+  border: none;
+	border-bottom: 1px solid #707070;;
+  padding-bottom: 4px;
+  width: 150px;
+  cursor: pointer;
+}
+
+
+
+.hidden {
+  /* display: none; */
+}
