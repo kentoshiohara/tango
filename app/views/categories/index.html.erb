@@ -1,25 +1,27 @@
 <div class="category-main">
   <div class="category-container">
     <h2 class="wordbook-title"><%= link_to current_user.name %>さんの単語帳一覧</h2>
-    <ul class="wordbook-lists">
-    <% current_user.categories.each do |category|%>
-      <li><%= link_to category.title, "#", class: 'wordbook_list' %></li>
-    <% end %>
-      <li class="create-title-btn">
+    <div class="list-container">
+      <ul class="wordbook-lists">
+      <% current_user.categories.each do |category|%>
+        <li><%= link_to category.title, "#", class: 'wordbook_list' %></li>
+      <% end %>
+      </ul>
+    </div>
+
+    <div class="title-btn">
       <%= link_to categories_path do %>
-      <i class="far fa-plus-square"></i>新しく作る
+      <p class="create-title-btn"><i class="far fa-plus-square"></i>新しく作る</p>
       <% end %>
-      </li>
-      <li>
-      <%= form_with model: @category, id: 'title_form', class: 'hidden', local: true do |f| %>
+      <div class="title-form">
+        <%= form_with model: @category, id: 'title_form', class: 'hidden', local: true do |f| %>
         <div class="form">
-          <%= f.text_field :title %>
+          <%= f.submit "＋", class:"submit-field"%>
+          <%= f.text_field :title, placeholder:"タイトル", class:"title-field" %>
+          <%# カラーを選べればなお良し %>
         </div>
-        <div class="action">
-          <%=f.submit "作成する"%>
-        </div>
-      <% end %>
-      </li>
-    </ul>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
