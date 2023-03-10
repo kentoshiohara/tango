@@ -1,22 +1,25 @@
-<div class="category-container">
-
-  <div class="side-bar">
-    <div class="side-bar-create-btn">
-      <%= link_to "単語帳を作成する", "#" %>
-    </div>
-
-    <div class="categories">
-      <%# <% current_user.categories.each do |category| %> 
-        <div class="category">
-          <div class="category-name">
-            <%# <%= link_to category.name, room_messages_path(room) %>
-          </div>
+<div class="category-main">
+  <div class="category-container">
+    <h2 class="wordbook-title"><%= link_to current_user.name %>さんの単語帳一覧</h2>
+    <ul class="wordbook-lists">
+    <% current_user.categories.each do |category|%>
+      <li><%= link_to category.title, "#", class: 'wordbook_list' %></li>
+    <% end %>
+      <li class="create-title-btn">
+      <%= link_to categories_path do %>
+      <i class="far fa-plus-square"></i>新しく作る
+      <% end %>
+      </li>
+      <li>
+      <%= form_with model: @category, id: 'title_form', class: 'hidden', local: true do |f| %>
+        <div class="form">
+          <%= f.text_field :title %>
         </div>
-      <%# <% end %>
-    </div>
-
-  </div>
-
-  <div class="main-register">
+        <div class="action">
+          <%=f.submit "作成する"%>
+        </div>
+      <% end %>
+      </li>
+    </ul>
   </div>
 </div>
