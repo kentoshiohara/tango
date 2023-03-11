@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   
   def index
     @category = Category.new
-    
+
   end
 
   def new
@@ -14,6 +14,11 @@ class CategoriesController < ApplicationController
     if category.save
       render :index
     end
+  end
+
+  def show
+    @category = Category.find(params[:id])
+    @vocabulary = Vacabulary.new
   end
 
   private
