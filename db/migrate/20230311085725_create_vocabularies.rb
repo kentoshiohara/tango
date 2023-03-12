@@ -1,4 +1,4 @@
-class CreateVacabularies < ActiveRecord::Migration[6.0]
+class CreateVocabularies < ActiveRecord::Migration[6.0]
   def change
     create_table :vacabularies do |t|
       t.string :title, null: false

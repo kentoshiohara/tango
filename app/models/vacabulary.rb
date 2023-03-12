@@ -1,2 +1,0 @@
-class Vacabulary < ApplicationRecord
-end
