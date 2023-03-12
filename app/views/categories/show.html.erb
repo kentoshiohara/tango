@@ -1,0 +1,29 @@
+<div class="show-main">
+  <span class="wordbook-title-show"><%= link_to @category.title, categories_path %></span>
+  <%= form_with model: [@category, @vocabulary], local: true do |f| %>
+  <table class="wordbook-table">
+    <tr class="table-row">
+      <th class="table-header">No. </th>
+      <th class="table-header">Vocabularies</th>
+      <th class="table-header">Meaning</th>
+    </tr>
+    <% @vocabularies.each.with_index(1) do |vocab, i| %>
+    <tr class="table-lists">
+      <td class="table-list"><%= i %></td>
+      <td class="table-list"><%= vocab.title %></td>
+      <td class="table-list"><%= vocab.meaning %></td>
+      <td class="table-form-right"><%= link_to "ー", category_vocabulary_path(category_id: vocab.category_id, id: vocab.id), method: :delete, class:"delete-btn" %></td>
+    </tr>
+    <% end %>
+    <tr class="table-forms">
+      <%= hidden_field_tag :category_id, @category.id %>
+      <td class="table-form"></td>
+      <td class="table-form"><%= f.text_field :title, placeholder:"vocabularyを追加", required: true, class:"text-form" %></td>
+      <td class="table-form"><%= f.text_field :meaning, placeholder:"meaningを追加", required: true, class:"text-form" %></td>
+      <td class="table-form-right"><%= f.submit "＋", class:"submit-field" %></td>
+    </tr>
+  </table>
+  <% end %>
+  <div class="show-back-btn"><%= link_to "単語帳一覧へ戻る", categories_path %></div>
+  <div class="wordbook-delete-btn"><%= link_to "単語帳を削除する", category_path(id: @category.id), method: :delete, data: { confirm: '本当に削除してもOKですか？' } %></div>
+</div>

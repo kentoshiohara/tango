@@ -11,13 +11,19 @@ a {
 .category-container {
   width: 70%;
   margin: 100px auto;
+  text-align: center;
 }
 
 .wordbook-title {
-  text-align: center;
+  display: inline-block;
   font-size: 24px;
   margin-bottom: 80px;
   letter-spacing: 0.1em;
+  background:linear-gradient(transparent 60%, rgb(255, 201, 102) 65%);
+}
+
+.wordbook-user-name {
+  font-weight: bold;
 }
 
 .list-container {
@@ -36,8 +42,8 @@ a {
   width: 110px;
   padding: 0.8em 2em;
   background: #f7f7f7;
-  border-left: solid 8px #5bb1fc;
-  color: #5bb1fc;
+  border-left: solid 8px #25189b;
+  color: #464646;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   text-align: center;
@@ -67,6 +73,7 @@ a {
 
 .title-form {
   display: flex;
+  text-align: start;
 }
 
 
@@ -83,14 +90,37 @@ a {
 
 .title-field {
   border: none;
-	border-bottom: 1px solid #707070;;
+	border-bottom: 1px solid #707070;
   padding-bottom: 4px;
   width: 150px;
-  cursor: pointer;
 }
 
-
-
 .hidden {
-  /* display: none; */
+  display: none;
+}
+
+.back-btn-container {
+  width: 70%;
+  margin: 60px auto;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: #67be83; 
+  box-shadow: 0 5px 0 #62a448; 
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align:center;
+  text-decoration: none;
+}
+
+.back-btn a {
+  color: #fff;
+}
+
+.back-btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
 }

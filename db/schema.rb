@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_09_082827) do
+ActiveRecord::Schema.define(version: 2023_03_11_085725) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -31,5 +31,15 @@ ActiveRecord::Schema.define(version: 2023_03_09_082827) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "vacabularies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "meaning", null: false
+    t.bigint "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_vacabularies_on_category_id"
+  end
+
   add_foreign_key "categories", "users"
+  add_foreign_key "vacabularies", "categories"
 end

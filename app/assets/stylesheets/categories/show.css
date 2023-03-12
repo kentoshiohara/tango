@@ -1,0 +1,135 @@
+.show-main {
+  height: 100vh;
+  width: 100vw;
+  margin: 100px 0;
+  text-align: center;
+}
+
+.wordbook-title-show {
+  display: inline-block;
+  font-size: 24px;
+  margin-bottom: 80px;
+  letter-spacing: 0.1em;
+  background:linear-gradient(transparent 60%, rgb(255, 201, 102) 65%);
+}
+
+
+/* 下部はテーブル */
+.wordbook-table {
+  margin: 0 auto;
+  width: 50%;
+  border-collapse:separate;
+}
+
+.table-header {
+  text-align: center;
+}
+
+
+.table-row {
+  width: 10%;
+}
+
+.table-lists {
+  width :40%;
+}
+.table-list {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.table-forms {
+  width: 40%;
+}
+
+table th{
+  background-color: #6b8fd2;
+  color: white;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+table td{
+  text-align: center;
+  padding: 6px 0;
+  border-bottom: 1px dotted darkgray;
+}
+
+.table-form-right {
+  width: 10%;
+}
+
+.delete-btn {
+  color: rgb(255, 255, 255);
+  background: #959595;;
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+
+.submit-field {
+  color: rgb(254, 254, 254);
+  background: rgb(255, 52, 52);
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 30px;
+}
+
+.text-form {
+  border: none;
+  width: 90%;
+  height: 100%;
+  margin: 0 20px;
+  padding: 5px 0;
+}
+
+
+/* 下部はボタン */
+.show-back-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: #67be83; 
+  box-shadow: 0 5px 0 #62a448; 
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align:center;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 60px;
+}
+
+.show-back-btn a {
+  color: #fff;
+}
+
+.show-back-btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}
+
+.wordbook-delete-btn {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: #959595; 
+  box-shadow: 0 5px 0 #717171; 
+  border-radius: 40px;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align:center;
+  text-decoration: none;
+  font-size: 14px;
+  margin: 60px 0 0 3em;
+}
+
+.wordbook-delete-btn a {
+  color: #fff;
+}
+
+.wordbook-delete-btn:hover {
+  box-shadow: none;
+  transform: translateY(5px);
+}

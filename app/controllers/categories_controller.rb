@@ -2,18 +2,30 @@ class CategoriesController < ApplicationController
   
   def index
     @category = Category.new
-    
   end
 
   def new
-    # @category = Category.new
   end
 
   def create
-    category = Category.new(category_params)
-    if category.save
+    @category = Category.new(category_params)
+    if @category.save
+      redirect_to category_path(@category)
+    else
       render :index
     end
+  end
+
+  def show
+    @category = Category.find(params[:id])
+    @vocabulary = Vocabulary.new
+    @vocabularies = @category.vocabularies
+  end
+
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to categories_path
   end
 
   private
